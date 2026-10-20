@@ -1,0 +1,361 @@
+Hệ thống trợ lý học tập thông minh dành riêng cho sinh viên CMC
+
+Một hệ thống AI cá nhân hóa giúp sinh viên CMC quản lý toàn bộ quá trình học tập: từ thời khóa biểu, bài tập, lịch thi, tài liệu học tập cho đến việc tự học và cải thiện kiến thức.
+
+Dưới đây là bản mô tả theo văn phong báo cáo đồ án.
+
+CHƯƠNG 1: GIỚI THIỆU ĐỀ TÀI
+1.1. Tên đề tài
+
+Xây dựng hệ thống trợ lý học tập thông minh ứng dụng trí tuệ nhân tạo dành cho sinh viên Trường Đại học CMC
+
+Tên hệ thống đề xuất:
+
+CMC Smart Student Assistant
+
+1.2. Lý do chọn đề tài
+
+Trong quá trình học tập tại trường đại học, sinh viên phải sử dụng nhiều hệ thống công nghệ khác nhau để phục vụ việc học tập như cổng thông tin sinh viên, hệ thống học trực tuyến, hệ thống quản lý học tập LMS, nền tảng giao bài tập và các công cụ quản lý cá nhân.
+
+Đối với sinh viên Trường Đại học CMC, các thông tin quan trọng phục vụ quá trình học tập hiện đang được phân tán trên nhiều nền tảng khác nhau như:
+
+Hệ thống quản lý đào tạo (MIU).
+Hệ thống học trực tuyến (eLearning).
+Hệ thống quản lý học tập LMS.
+Hệ thống giao bài tập EduX.
+Email trường học.
+
+Mỗi hệ thống đảm nhiệm một chức năng riêng, dẫn đến việc sinh viên phải thường xuyên kiểm tra nhiều nền tảng để cập nhật:
+
+Thời khóa biểu.
+Lịch học trực tuyến.
+Bài tập được giao.
+Deadline.
+Lịch thi.
+Thông báo từ giảng viên.
+
+Điều này gây ra nhiều bất tiện trong việc quản lý thời gian. Sinh viên có thể bỏ sót bài tập, quên deadline hoặc không phân bổ được thời gian học tập hợp lý.
+
+Bên cạnh đó, các ứng dụng quản lý lịch hiện nay chủ yếu chỉ có chức năng lưu trữ sự kiện, chưa có khả năng hiểu được bối cảnh học tập của từng sinh viên để đưa ra kế hoạch học tập phù hợp.
+
+Với sự phát triển của trí tuệ nhân tạo, việc xây dựng một trợ lý học tập cá nhân có khả năng phân tích dữ liệu học tập, tự động lập kế hoạch và hỗ trợ giải đáp kiến thức là một hướng phát triển có tính thực tiễn cao.
+
+Do đó, đề tài xây dựng CMC Smart Student Assistant được đề xuất nhằm tạo ra một nền tảng hỗ trợ sinh viên CMC quản lý toàn bộ quá trình học tập thông qua việc kết hợp dữ liệu từ các hệ thống đào tạo hiện có với công nghệ AI.
+
+CHƯƠNG 2: TỔNG QUAN HỆ THỐNG
+2.1. Ý tưởng tổng quan
+
+CMC Smart Student Assistant là một ứng dụng chạy trên máy tính cá nhân của sinh viên.
+
+Hệ thống có khả năng:
+
+Đăng nhập bằng tài khoản sinh viên CMC.
+Thu thập dữ liệu học tập từ các nền tảng của nhà trường.
+Tổng hợp thành một hệ thống quản lý học tập thống nhất.
+Phân tích lịch học và công việc.
+Đề xuất kế hoạch học tập cá nhân hóa bằng AI.
+
+Toàn bộ dữ liệu cá nhân được lưu trữ cục bộ trên thiết bị người dùng nhằm đảm bảo quyền riêng tư.
+
+CHƯƠNG 3: CÁC CHỨC NĂNG CHÍNH CỦA HỆ THỐNG
+3.1. Đồng bộ dữ liệu học tập từ hệ thống CMC
+
+Hệ thống hỗ trợ lấy dữ liệu trực tiếp từ các nền tảng học tập của trường.
+
+Bao gồm:
+
+3.1.1. Đồng bộ thời khóa biểu
+
+Sinh viên đăng nhập bằng tài khoản trường.
+
+Hệ thống tự động lấy:
+
+Danh sách môn học.
+Phòng học.
+Giảng viên.
+Thời gian bắt đầu.
+Thời gian kết thúc.
+Hình thức học:
+Offline.
+Online.
+
+Sau khi lấy dữ liệu, hệ thống tự xây dựng một thời khóa biểu cá nhân.
+
+Ví dụ:
+
+Thứ 2
+
+07:00 - 09:30
+Lập trình hướng đối tượng
+Phòng A203
+
+09:45 - 12:30
+Cấu trúc dữ liệu
+Phòng A203
+
+
+13:00 - 17:00
+Thời gian trống
+=> AI đề xuất lịch học
+3.1.2. Tổng hợp bài tập từ nhiều nền tảng
+
+Hệ thống tự động thu thập bài tập từ:
+
+EduX.
+eLearning.
+LMS.
+
+Các dữ liệu được tổng hợp:
+
+Tên bài tập.
+Môn học.
+Nội dung.
+Deadline.
+Trạng thái hoàn thành.
+
+Ví dụ:
+
+Danh sách công việc
+
+[ ] Bài tập OOP chương 3
+Deadline:
+12/07/2026
+
+[ ] Quiz Database
+Deadline:
+15/07/2026
+3.1.3. Phân tích lịch thi
+
+Hệ thống tự động quét lịch thi:
+
+Môn thi.
+Ngày thi.
+Ca thi.
+Phòng thi.
+
+Sau đó tính toán:
+
+Còn 18 ngày tới kỳ thi
+Môn:
+Cấu trúc dữ liệu
+
+Đề xuất:
+Tuần 1:
+Ôn lý thuyết
+
+Tuần 2:
+Làm bài tập
+
+Tuần 3:
+Luyện đề
+CHƯƠNG 4: BẢN ĐỒ THỜI GIAN HỌC TẬP THÔNG MINH
+
+Sau khi thu thập dữ liệu, hệ thống tạo ra bản đồ thời gian cá nhân.
+
+Các trạng thái thời gian:
+
+Thời gian bắt buộc
+
+Bao gồm:
+
+Lịch học trên trường.
+Lịch học online.
+Lịch thi.
+Thời gian linh hoạt
+
+Bao gồm:
+
+Khoảng thời gian rảnh.
+Thời gian có thể tự học.
+Thời gian nghỉ.
+
+Ví dụ:
+
+Thứ 3
+
+07:00 - 12:30
+Học trên trường
+
+12:30 - 14:00
+Nghỉ
+
+14:00 - 16:00
+AI đề xuất:
+Ôn Java
+
+16:00 - 18:00
+Làm bài tập LMS
+
+20:00 - 21:30
+Đọc tài liệu
+CHƯƠNG 5: AI LẬP LỊCH HỌC TẬP
+
+Đây là chức năng quan trọng nhất của hệ thống.
+
+Sinh viên không cần tự tạo lịch học.
+
+Chỉ cần nhập:
+
+"Ngày mai tôi học 7h tới 12h30, chiều rảnh"
+
+AI sẽ phân tích:
+
+Thời khóa biểu.
+Deadline.
+Môn học.
+Lịch thi.
+Tiến độ hiện tại.
+
+Sau đó tạo kế hoạch.
+
+Ví dụ:
+
+Chiều thứ 2:
+
+14:00 - 15:30
+Làm bài tập LMS môn OOP
+
+15:45 - 17:00
+Ôn bài ngày mai:
+Cấu trúc dữ liệu
+
+20:00 - 21:00
+Đọc tài liệu AI
+CHƯƠNG 6: TRỢ LÝ AI HỌC TẬP
+
+Hệ thống tích hợp AI hỗ trợ sinh viên trong quá trình tự học.
+
+Các chức năng:
+
+Kiểm tra kiến thức
+
+Sinh viên gửi:
+
+"Tôi hiểu rằng Binary Search có độ phức tạp O(n)"
+
+AI phân tích:
+
+Nhận định chưa chính xác.
+
+Binary Search có độ phức tạp:
+O(log n)
+
+Điều kiện:
+Mảng phải được sắp xếp trước.
+Giải thích bài học
+
+Sinh viên có thể hỏi:
+
+"Giải thích con trỏ trong C++"
+
+AI trả lời dựa trên:
+
+Kiến thức chung.
+Tài liệu sinh viên đã tải lên.
+CHƯƠNG 7: QUẢN LÝ TÀI LIỆU THÔNG MINH
+
+Sinh viên có thể tải:
+
+Slide.
+PDF.
+Giáo trình.
+Note cá nhân.
+
+AI phân tích nội dung:
+
+Ví dụ:
+
+Upload:
+
+Chương 5 Database.pdf
+
+AI tạo:
+
+Tóm tắt chương:
+- SQL
+- Transaction
+- Index
+
+Gợi ý học:
+1. Ôn JOIN
+2. Làm bài tập Query
+3. Thực hành Database
+CHƯƠNG 8: TEXTBOOK - SỔ TAY HỌC TẬP
+
+Textbook là nơi sinh viên ghi chú kiến thức.
+
+Chức năng:
+
+Viết note.
+Lưu bài học.
+Xuất file DOCX.
+Tạo tài liệu cá nhân.
+
+Đặc biệt:
+
+Nội dung textbook trở thành dữ liệu tham khảo cho AI.
+
+AI hiểu:
+
+Sinh viên đang học gì.
+Điểm yếu ở đâu.
+Cần bổ sung kiến thức nào.
+
+Ví dụ:
+
+Sinh viên thường ghi chú:
+
+Khó hiểu:
+Con trỏ C++
+
+AI nhận biết:
+
+Đề xuất:
+Ôn lại:
+- Memory management
+- Reference
+- Pointer arithmetic
+CHƯƠNG 9: HỆ THỐNG NHẮC NHỞ THÔNG MINH
+
+Bao gồm:
+
+Nhắc lịch học
+15 phút nữa:
+Bạn có tiết
+Lập trình Java
+Nhắc deadline
+Còn 2 ngày:
+
+Bài tập Database
+Chưa hoàn thành
+Xin phép nghỉ học tự động
+
+Nếu sinh viên không thể đi học:
+
+Sinh viên cung cấp:
+
+Lý do.
+Hình ảnh chứng minh.
+
+AI tự tạo email:
+
+Kính gửi thầy/cô...
+
+Em xin phép được nghỉ học môn...
+
+Lý do...
+
+Em xin gửi kèm minh chứng.
+
+Sau đó gửi trực tiếp tới email giảng viên.
+
+CHƯƠNG 10: HƯỚNG PHÁT TRIỂN
+
+Trong tương lai hệ thống có thể mở rộng:
+
+Phiên bản mobile.
+Đồng bộ cloud.
+Phân tích kết quả học tập.
+Dự đoán nguy cơ rớt môn.
+Kết nối nhiều trường đại học.
+AI mentor cá nhân.
